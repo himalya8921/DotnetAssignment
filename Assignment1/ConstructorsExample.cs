@@ -28,7 +28,6 @@ namespace Assignment1
             return this.secondNumber;
         }
 
-
         public ConstructorsExample()
         {
             Console.WriteLine("Default Constructor Called");

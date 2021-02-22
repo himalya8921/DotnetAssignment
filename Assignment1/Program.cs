@@ -20,18 +20,21 @@ namespace Assignment1
             Console.WriteLine("First Number is " + firstNumber + " Second Number is" + secondNumber);
 
             // Palindrome Function
+            Console.WriteLine("Enter number to check if it is palindrome or not"); 
             int toCheckPalindrome = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine(IsPalindrome(toCheckPalindrome));
+
+            //Abstract Class Implementation
+            DerivedClass derivedObj = new DerivedClass();
+            derivedObj.TestFunction();
+
 
             //Interface
             Car carObj = new Car();
             carObj.Brake();
             carObj.Move();
 
-            //Abstract Class Implementation
-            DerivedClass derivedObj = new DerivedClass();
-            derivedObj.TestFunction();
-
+          
             //Constructors Example
             ConstructorsExample constructorObj1 = new ConstructorsExample();
             ConstructorsExample constructorObj2 = new ConstructorsExample(10,5);
@@ -106,12 +109,13 @@ namespace Assignment1
 
         public static string GetReverseString(string str)
         {
-            // himalya
+
             char temp;
             StringBuilder sb = new StringBuilder(str);
 
             for(int index = 0; index < sb.Length/2; index++)
             {
+
                 temp = sb[index];
                 sb[index] = sb[sb.Length - index - 1];
                 sb[sb.Length - index - 1] = temp;
